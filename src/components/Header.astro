@@ -1,20 +1,161 @@
 ---
 
+
 ---
 
-<header>
-    <p>Pablo Galfré</p>
-    
-    <ul>
-        <li>Documentales</li>
-        <li>Libros</li>
-    </ul>
+<header class="primary-header">
+    <div class="nav-wrapper flex">
+      <div class="logo">
+         <a href="index.html"
+          ><h1>
+            Pablo Galfré
+          </h1>
+        </a>
+      </div>
 
-</header>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+      <nav class="flex-end-nav">
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+          <li class="active">
+            <a class="nav-item" href="index.html">Inicio</a>
+          </li>
+          <li><a class="nav-item" href="documentales.html">Documentales</a></li>
+          <li><a class="nav-item" href="libros.html">Libros</a></li>
+          <li><a class="nav-item" href="articulos.html">Artículos</a></li>
+          <li><a class="nav-item" href="podcast.html">Podcast</a></li>
+          <li><a class="nav-item" href="tv.html">Producción de tv</a></li>
+          <li><a class="nav-item nav-item-cv" href="cv.html">Curriculum</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 <style>
 	header {
-        background-color: var(--cl-dark-blue);
-        color: var(--cl-white)
+    background-color: var(--cl-dark-blue);
+    padding-block: .5rem;
+    
     }
+
+    .primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+    .nav-wrapper {
+    position: relative;
+    width: min(100% - 2rem, 1440px);
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  color: var(--cl-white);
+}
+
+.nav-item {
+  color: var(--cl-white);
+  position: relative;
+  font-size: 1rem;
+  padding-inline: .5rem;
+  transition: ease-in-out;
+}
+
+.nav-item:hover{
+  color: var(--color-blue);
+}
+
+.nav-item-cv {
+    color: var(--cl-ligth-blue);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 785px) {
+  .primary-navigation {
+    list-style: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 40%;
+    margin: 0;
+    flex-direction: column;
+    background-color: var(--cl-dark-blue);
+    color: var(--cl-white);
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+    padding-top: 2rem;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    background: transparent;
+    background-image: url(/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(/icon-close.svg);
+  }
+
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid #333;
+    outline-offset: 5px;
+  }
+
+  .active a::before {
+    content: "\2022";
+    height: 15px;
+    width: 10px;
+    left: -10px;
+    bottom: 30%;
+    transform: translate(-50%);
+    color: #fff;
+    position: absolute;
+  }
+
+  .active a::after {
+    display: none;
+  }
+
+  .nav-item::before {
+    display: none;
+  }
+}
+
+
 </style>
+
+<script>
+    const nav = document.querySelector(".primary-navigation");
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+
+navToggle.addEventListener("click", () => {
+
+    const visiblity = nav.getAttribute("data-visible");
+    if (visiblity === "false") {
+        nav.setAttribute("data-visible", "true");
+        navToggle.setAttribute("aria-expanded", "true");
+    } else {
+        nav.setAttribute("data-visible", "false");
+        navToggle.setAttribute("aria-expanded", "false");
+    }
+})
+</script>
