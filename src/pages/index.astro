@@ -1,12 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import galfreBio from '../assets/img/galfre-rostro.png'
+import muertePodcast from '../assets/img/podcast/podcast-muerte.jpeg'
+import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
+import home from '../assets/img/home.jpeg'
+import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg'
+import libroLaComunidad from '../assets/img/libros/libro-la-comunidad.jpeg'
+import libroRequiem from '../assets/img/libros/libro-requiem.jpeg'
 ---
 
 <Layout title="Pablo Galfré">
 	<main>
-		<section class="hero">
-			<h1>Página de Pablo Galfré</h1>
+		<section class="hero" style={`background-image: url(${home.src});`}>
+			<h2>Periodismo</h2>
+			<h2>Podcast</h2>
+			<h2>Documentales</h2>
 		</section>
 		<section class="section textos bio">
 			<h2 class="title">Proyecto / Bio</h2>
@@ -19,28 +27,57 @@ import galfreBio from '../assets/img/galfre-rostro.png'
 			<h2 class="title">Trayectoria</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt minus itaque ex, nihil nemo fuga repudiandae, consequatur non eum deserunt repellendus repellat placeat adipisci quae ducimus dicta doloribus corrupti.</p>
 		</section>
-		<section class="libros">
+		<section class="section libros">
 			<h2 class="title">Libros</h2>
+			<section class="splide" aria-label="Splide Basic HTML Example">
+				<div class="splide__track">
+					  <ul class="splide__list">
+						  <li class="splide__slide"><img src={libroGatillo.src} alt=""></li>
+						  <li class="splide__slide"><img src={libroLaComunidad.src} alt=""></li>
+						  <li class="splide__slide"><img src={libroRequiem.src} alt=""></li>
+					  </ul>
+				</div>
+			  </section>
 		</section>
-		<section class="documentales">
+		<section class="section documentales">
 			<h2 class="title">Documentales</h2>
 		</section>
 		<section class="section articulos">
 			<h2 class="title">Artículos</h2>	
 			<div class="articulo flex">
-				<img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
+				<img class="img img-articulos" src={elFetiche.src} alt="imagen del artículo El fetiche diferente">
 				<div>
 					<h3 class="articulo-title">El fetiche diferente</h3>
 					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
 					<button class="btn leer-mas">Leer más</button>
 				</div>
+				
+			</div>
+			<div class="articulo flex">
+				<img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
+				<div>
+					<h3 class="articulo-title">Rebelión en la granja</h3>
+					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
+					<button class="btn leer-mas">Leer más</button>
+				</div>
+				
+			</div>
+			<div class="articulo flex">
+				<img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
+				<div>
+					<h3 class="articulo-title">Masacre en la granja Resilencia San Fernando</h3>
+					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
+					<button class="btn leer-mas">Leer más</button>
+				</div>			
 			</div>
 		</section>
-		<section class="section podcast">
-			<h2 class="title">Podcast</h2>
+
+		<h2 class="title title-podcast">Podcast</h2>
+		<div class="podcast-section-wrapper">
+			<section class="section podcast">
 			<div class="podcast-wrapper">
-				<div class="flex">
-					<img src="" alt="imagen del podcast Muertes en el internado">
+				<div class="flex-podcast">
+					<img src={muertePodcast.src} alt="imagen del podcast Muertes en el internado">
 					<div>
 						<h3 class="podcast-title">Muertes en el internado</h3>
 						<p class="text text-podcast">El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de carbono en un incendio en ese centro de “salud mental” del norte del Gran Buenos Aires. El hecho no tuvo casi cobertura mediática, pese a que se sabía incluso que el lugar no contaba con habilitación del Ministerio de Salud bonaerense. ¿Quién es Alejandro					Merenzon, responsable de que varios de esos jóvenes fueran internados en esa comunidad y que hace décadas lucra con la vida y la muerte de consumidores problemáticos de drogas? ¿Qué rol cumple el Órgano de Revisión de la Ley de Salud Mental provincial?
@@ -50,17 +87,29 @@ import galfreBio from '../assets/img/galfre-rostro.png'
 				</div>
 			</div>
 		</section>
+		</div>
 	</main>
 </Layout>
 
 <style>
 
 	main {
-		width: min(100% - 2rem, 1440px);
-  		margin-inline: auto;
+		margin-top: 5rem;
+	}
+	.hero {
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+		aspect-ratio: ;
+		min-height: 100vh;
 	}
 
 	.section {
+		width: min(100% - 2rem, 1440px);
+  		margin-inline: auto;
 		padding-block: 1rem;
 	}
 
@@ -69,16 +118,71 @@ import galfreBio from '../assets/img/galfre-rostro.png'
 	}
 
 	.articulo {
-		background-color: var(--cl-ligth-blue);
+		margin-block: 1rem;
+		background-color: var(--cl-ligther-blue);
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
 	}
+
 	.img-articulos {
 		padding: .5rem;
+		border-radius: 15px;
+		max-width: 300px;
+	}
+
+	.podcast-section-wrapper {
+		background-color: var(--cl-ligth-blue);
+		margin-block: 2rem;
+	}
+
+	.title-podcast {
+		width: min(100% - 2rem, 1440px);
+  		margin-inline: auto;
+
+	}
+
+	.flex-podcast {
+		display: flex;
+		gap:1rem;
 	}
 
 	.podcast-wrapper {
-		background-color: var(--cl-ligth-blue);
 		color: var(--cl-white);
+	}
+
+	.podcast-wrapper img {
+		border-radius: 8px;
+	}
+
+	@media (max-width: 830px) {
+		.flex-podcast {
+			flex-direction: column;
+		}
 	}
 	
 </style>
+
+<script>
+	import Splide from '@splidejs/splide';
+
+document.addEventListener( 'DOMContentLoaded', function() {
+	var splide = new Splide( '.splide', {
+  perPage: 3,
+  gap    : '2rem',
+  breakpoints: {
+    640: {
+      perPage: 2,
+      gap    : '.7rem',
+      height : '6rem',
+    },
+    480: {
+      perPage: 1,
+      gap    : '.7rem',
+      height : '6rem',
+    },
+  },
+} );
+
+splide.mount();
+	})
+</script>

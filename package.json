@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@splidejs/splide": "4.1.4",
     "astro": "3.1.0",
     "eslint-config-airbnb": "19.0.4"
   }
