@@ -7,14 +7,16 @@ import home from "../assets/img/home.jpeg";
 import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
 import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
 import libroRequiem from "../assets/img/libros/libro-requiem.jpeg";
+
+console.log("hola");
 ---
 
 <Layout title="Pablo Galfré">
   <main>
     <section class="hero" style={`background-image: url(${home.src});`}>
-      <h2>Periodismo</h2>
-      <h2>Podcast</h2>
-      <h2>Documentales</h2>
+      <h2 id="title">Periodismo</h2>
+      <!-- <h2>Podcast</h2>
+      <h2>Documentales</h2> -->
     </section>
     <section class="section textos bio">
       <h2 class="title">Proyecto / Bio</h2>
@@ -152,8 +154,17 @@ import libroRequiem from "../assets/img/libros/libro-requiem.jpeg";
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    aspect-ratio:;
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero h2 {
+    color: var(--cl-white);
+    font-weight: 600;
+    font-size: 4rem;
+    align-self: center;
+    margin-right: 1rem;
   }
 
   .img-bio {
@@ -228,4 +239,16 @@ import libroRequiem from "../assets/img/libros/libro-requiem.jpeg";
 
     splide.mount();
   });
+
+  const titles = ["Periodismo", "Podcast", "Documentales"];
+  let title = titles[0];
+
+  const changeTitle = () => {
+    const nextTitle = titles.shift();
+    titles.push(nextTitle);
+    title = nextTitle;
+    document.querySelector("#title").textContent = title;
+  };
+
+  setInterval(changeTitle, 2000);
 </script>
