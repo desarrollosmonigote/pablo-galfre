@@ -1,97 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import galfreBio from '../assets/img/galfre-rostro.png'
-import muertePodcast from '../assets/img/podcast/podcast-muerte.jpeg'
-import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
+import Layout from '../layouts/Layout.astro'
 import home from '../assets/img/home.jpeg'
-import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg'
-import libroLaComunidad from '../assets/img/libros/libro-la-comunidad.jpeg'
-import libroRequiem from '../assets/img/libros/libro-requiem.jpeg'
+import Biografia from '../components/Biografia.astro';
+import Trayectoria from '../components/Trayectoria.astro'
+import Libros from '../components/Libros.astro'
+import Documentales from '../components/Documentales.astro';
+import Articulos from '../components/Articulos.astro';
+import Podcasts from '../components/Podcasts.astro';
 ---
 
 <Layout title="Pablo Galfré">
-	<main>
 		<section class="hero" style={`background-image: url(${home.src});`}>
 			<h2>Periodismo</h2>
 			<h2>Podcast</h2>
 			<h2>Documentales</h2>
 		</section>
-		<section class="section textos bio">
-			<h2 class="title">Proyecto / Bio</h2>
-			<div class="flex">
-				<img class="img-bio" src={galfreBio.src} alt="imagen del rostro de Pablo Galfré">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat delectus consequuntur quisquam. Ea a illum nulla excepturi dolores iusto? Nesciunt atque praesentium cupiditate nihil tenetur unde quaerat eos quae.</p>
-			</div>
-		</section>
-		<section class="section textos trayectoria">
-			<h2 class="title">Trayectoria</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt minus itaque ex, nihil nemo fuga repudiandae, consequatur non eum deserunt repellendus repellat placeat adipisci quae ducimus dicta doloribus corrupti.</p>
-		</section>
-		<section class="section libros">
-			<h2 class="title">Libros</h2>
-			<section class="splide" aria-label="Splide Basic HTML Example">
-				<div class="splide__track">
-					  <ul class="splide__list">
-						  <li class="splide__slide"><img src={libroGatillo.src} alt=""></li>
-						  <li class="splide__slide"><img src={libroLaComunidad.src} alt=""></li>
-						  <li class="splide__slide"><img src={libroRequiem.src} alt=""></li>
-					  </ul>
-				</div>
-			  </section>
-		</section>
-		<section class="section documentales">
-			<h2 class="title">Documentales</h2>
-		</section>
-		<section class="section articulos">
-			<h2 class="title">Artículos</h2>	
-			<div class="articulo flex">
-				<img class="img img-articulos" src={elFetiche.src} alt="imagen del artículo El fetiche diferente">
-				<div>
-					<h3 class="articulo-title">El fetiche diferente</h3>
-					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
-					<button class="btn leer-mas">Leer más</button>
-				</div>
-				
-			</div>
-			<div class="articulo flex">
-				<img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
-				<div>
-					<h3 class="articulo-title">Rebelión en la granja</h3>
-					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
-					<button class="btn leer-mas">Leer más</button>
-				</div>
-				
-			</div>
-			<div class="articulo flex">
-				<img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
-				<div>
-					<h3 class="articulo-title">Masacre en la granja Resilencia San Fernando</h3>
-					<p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
-					<button class="btn leer-mas">Leer más</button>
-				</div>			
-			</div>
-		</section>
-
-		<h2 class="title title-podcast">Podcast</h2>
-		<div class="podcast-section-wrapper">
-			<section class="section podcast">
-			<div class="podcast-wrapper">
-				<div class="flex-podcast">
-					<img src={muertePodcast.src} alt="imagen del podcast Muertes en el internado">
-					<div>
-						<h3 class="podcast-title">Muertes en el internado</h3>
-						<p class="text text-podcast">El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de carbono en un incendio en ese centro de “salud mental” del norte del Gran Buenos Aires. El hecho no tuvo casi cobertura mediática, pese a que se sabía incluso que el lugar no contaba con habilitación del Ministerio de Salud bonaerense. ¿Quién es Alejandro					Merenzon, responsable de que varios de esos jóvenes fueran internados en esa comunidad y que hace décadas lucra con la vida y la muerte de consumidores problemáticos de drogas? ¿Qué rol cumple el Órgano de Revisión de la Ley de Salud Mental provincial?
-						</p>
-						<button class="btn ver-mas">Ver más</button>
-					</div>	
-				</div>
-			</div>
-		</section>
-		</div>
-	</main>
+		<Biografia/>
+		<Trayectoria /> 
+		<Libros />
+		<Documentales />
+		<Articulos />
+		<Podcasts /> 
 </Layout>
 
-<style>
+<style is:global>
 
 	main {
 		margin-top: 5rem;
@@ -100,21 +32,17 @@ import libroRequiem from '../assets/img/libros/libro-requiem.jpeg'
 		background-repeat: no-repeat;
 		background-position: center center;
 		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 		aspect-ratio: ;
 		min-height: 100vh;
 	}
 
 	.section {
 		width: min(100% - 2rem, 1440px);
-  		margin-inline: auto;
+		margin-inline: auto;
 		padding-block: 1rem;
-	}
-
-	.img-bio {
-		max-width: 300px;
 	}
 
 	.articulo {
@@ -137,8 +65,7 @@ import libroRequiem from '../assets/img/libros/libro-requiem.jpeg'
 
 	.title-podcast {
 		width: min(100% - 2rem, 1440px);
-  		margin-inline: auto;
-
+		margin-inline: auto;
 	}
 
 	.flex-podcast {
@@ -159,30 +86,8 @@ import libroRequiem from '../assets/img/libros/libro-requiem.jpeg'
 			flex-direction: column;
 		}
 	}
-	
 </style>
 
 <script>
-	import Splide from '@splidejs/splide';
-
-document.addEventListener( 'DOMContentLoaded', function() {
-	var splide = new Splide( '.splide', {
-  perPage: 3,
-  gap    : '2rem',
-  breakpoints: {
-    640: {
-      perPage: 2,
-      gap    : '.7rem',
-      height : '6rem',
-    },
-    480: {
-      perPage: 1,
-      gap    : '.7rem',
-      height : '6rem',
-    },
-  },
-} );
-
-splide.mount();
-	})
+	
 </script>
