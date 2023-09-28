@@ -11,9 +11,9 @@ import Podcasts from "../components/Podcasts.astro";
 
 <Layout title="Pablo Galfré">
   <section class="hero" style={`background-image: url(${home.src});`}>
-    <h2>Periodismo</h2>
-    <h2>Podcast</h2>
-    <h2>Documentales</h2>
+    <h2 id="title">Periodismo</h2>
+      <!-- <h2>Podcast</h2>
+      <h2>Documentales</h2> -->
   </section>
   <Biografia />
   <Trayectoria />
@@ -24,24 +24,24 @@ import Podcasts from "../components/Podcasts.astro";
 </Layout>
 
 <style is:global>
-  main {
-    margin-top: 5rem;
-  }
-  .hero {
+ .hero {
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    aspect-ratio:;
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
   }
 
-  .section {
-    width: min(100% - 2rem, 1440px);
-    margin-inline: auto;
-    padding-block: 1rem;
+  .hero h2 {
+    color: var(--cl-white);
+    font-weight: 600;
+    font-size: 4rem;
+    align-self: center;
+    margin-right: 1rem;
   }
 
   .img-bio {
@@ -94,5 +94,17 @@ import Podcasts from "../components/Podcasts.astro";
 </style>
 
 <script>
+
+const titles = ["Periodismo", "Podcast", "Documentales"];
+  let title = titles[0];
+
+  const changeTitle = () => {
+    const nextTitle = titles.shift();
+    titles.push(nextTitle);
+    title = nextTitle;
+    document.querySelector("#title").textContent = title;
+  };
+
+  setInterval(changeTitle, 2000);
  
 </script>
