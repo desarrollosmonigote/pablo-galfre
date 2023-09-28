@@ -1,93 +1,98 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import home from '../assets/img/home.jpeg'
-import Biografia from '../components/Biografia.astro';
-import Trayectoria from '../components/Trayectoria.astro'
-import Libros from '../components/Libros.astro'
-import Documentales from '../components/Documentales.astro';
-import Articulos from '../components/Articulos.astro';
-import Podcasts from '../components/Podcasts.astro';
+import Layout from "../layouts/Layout.astro";
+import home from "../assets/img/home.jpeg";
+import Biografia from "../components/Biografia.astro";
+import Trayectoria from "../components/Trayectoria.astro";
+import Libros from "../components/Libros.astro";
+import Documentales from "../components/Documentales.astro";
+import Articulos from "../components/Articulos.astro";
+import Podcasts from "../components/Podcasts.astro";
 ---
 
 <Layout title="Pablo Galfré">
-		<section class="hero" style={`background-image: url(${home.src});`}>
-			<h2>Periodismo</h2>
-			<h2>Podcast</h2>
-			<h2>Documentales</h2>
-		</section>
-		<Biografia/>
-		<Trayectoria /> 
-		<Libros />
-		<Documentales />
-		<Articulos />
-		<Podcasts /> 
+  <section class="hero" style={`background-image: url(${home.src});`}>
+    <h2>Periodismo</h2>
+    <h2>Podcast</h2>
+    <h2>Documentales</h2>
+  </section>
+  <Biografia />
+  <Trayectoria />
+  <Libros />
+  <Documentales />
+  <Articulos />
+  <Podcasts />
 </Layout>
 
 <style is:global>
+  main {
+    margin-top: 5rem;
+  }
+  .hero {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    aspect-ratio:;
+    min-height: 100vh;
+  }
 
-	main {
-		margin-top: 5rem;
-	}
-	.hero {
-		background-repeat: no-repeat;
-		background-position: center center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		aspect-ratio: ;
-		min-height: 100vh;
-	}
+  .section {
+    width: min(100% - 2rem, 1440px);
+    margin-inline: auto;
+    padding-block: 1rem;
+  }
 
-	.section {
-		width: min(100% - 2rem, 1440px);
-		margin-inline: auto;
-		padding-block: 1rem;
-	}
+  .img-bio {
+    max-width: 300px;
+  }
 
-	.articulo {
-		margin-block: 1rem;
-		background-color: var(--cl-ligther-blue);
-		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-		border-radius: 10px;
-	}
+  .articulo {
+    margin-block: 1rem;
+    background-color: var(--cl-ligther-blue);
+    box-shadow:
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
 
-	.img-articulos {
-		padding: .5rem;
-		border-radius: 15px;
-		max-width: 300px;
-	}
+  .img-articulos {
+    padding: 0.5rem;
+    border-radius: 15px;
+    max-width: 300px;
+  }
 
-	.podcast-section-wrapper {
-		background-color: var(--cl-ligth-blue);
-		margin-block: 2rem;
-	}
+  .podcast-section-wrapper {
+    background-color: var(--cl-ligth-blue);
+    margin-block: 2rem;
+  }
 
-	.title-podcast {
-		width: min(100% - 2rem, 1440px);
-		margin-inline: auto;
-	}
+  .title-podcast {
+    width: min(100% - 2rem, 1440px);
+    margin-inline: auto;
+  }
 
-	.flex-podcast {
-		display: flex;
-		gap:1rem;
-	}
+  .flex-podcast {
+    display: flex;
+    gap: 1rem;
+  }
 
-	.podcast-wrapper {
-		color: var(--cl-white);
-	}
+  .podcast-wrapper {
+    color: var(--cl-white);
+  }
 
-	.podcast-wrapper img {
-		border-radius: 8px;
-	}
+  .podcast-wrapper img {
+    border-radius: 8px;
+  }
 
-	@media (max-width: 830px) {
-		.flex-podcast {
-			flex-direction: column;
-		}
-	}
+  @media (max-width: 830px) {
+    .flex-podcast {
+      flex-direction: column;
+    }
+  }
 </style>
 
 <script>
-	
+ 
 </script>

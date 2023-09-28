@@ -1,147 +1,170 @@
---- 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-	</head>
-	<body>
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+      :root {
+        --cl-background: rgba(241, 245, 249, 1);
+        --cl-dark-blue: rgba(40, 48, 64, 1);
+        --cl-ligth-blue: rgba(128, 155, 191, 1);
+        --cl-ligther-blue: rgba(128, 155, 191, 0.3);
+        --cl-white: rgba(255, 255, 255, 1);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 100%;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--cl-background);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      img,
+      picture {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a,
+      a:focus,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+      }
+
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        font-weight: 400;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+
+      button,
+      select {
+        text-transform: none;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap; /* added line */
+        border: 0;
+      }
+      /* remove animations for people who've turned them off */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* ------------------- */
+      /* Utility classes     */
+      /* ------------------- */
+
+      .flex {
+        display: flex;
+        gap: var(--gap, 1rem);
+      }
+
+      .grid {
+        display: grid;
+        gap: var(--gap, 1rem);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .section {
+        width: min(100% - 2rem, 1440px);
+        margin-inline: auto;
+        padding-block: 1rem;
+      }
+
+      .title {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--cl-dark-blue);
+      }
+
+      main {
+        margin-top: 5rem;
+      }
+    </style>
+  </body>
 </html>
-<style is:global>
-
-  @import '@splidejs/splide/css';	
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-	:root {
-		--cl-background : rgba(241,245,249,1);
-		--cl-dark-blue: rgba(40, 48, 64, 1);
-		--cl-ligth-blue: rgba(128, 155, 191, 1);
-		--cl-ligther-blue: rgba(128, 155, 191, 0.30); 
-		--cl-white: rgba(255,255,255,1);
-	}
-
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-	html {
-  		font-size: 100%;
-  		-webkit-text-size-adjust: 100%;
-  		scroll-behavior: smooth;			
-	}
-
-	body {
-		font-family: 'Montserrat', sans-serif;
-		background: var(--cl-background);	
-		line-height: 1.6;
-		min-height: 100vh;
-	}
-
-	img, picture {
-  		width: 100%;
-  		height: auto;
-  		display: block;
-	}
-
-	a, a:focus, a:hover, a:active {
-  		text-decoration: none;
-  		color: inherit;
-  		outline: none;
-	}
-
-	abbr[title] {
-  		border-bottom: none; 
-  		text-decoration: underline; 
-  		text-decoration: underline dotted; 
-	}
-
-	ul {
-  		list-style-type: none;
-	}
-
-	h1, h2, h3, h4, h5, h6, p {
-  		font-weight: 400;
-	}
-
-	button, input, optgroup, select, textarea {
-  		font-family: inherit;
-  		font-size: 100%;
-  		line-height: 1.15; 
-  		margin: 0;
-	}
-
-	button, select {
-  		text-transform: none;
-	}
-
-	.sr-only {
-  		position: absolute;
-  		width: 1px;
-  		height: 1px;
-  		padding: 0;
-  		margin: -1px;
-  		overflow: hidden;
-  		clip: rect(0, 0, 0, 0);
-  		white-space: nowrap; /* added line */
-  		border: 0;
-	
-	}
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    	animation-duration: 0.01ms !important;
-    	animation-iteration-count: 1 !important;
-    	transition-duration: 0.01ms !important;
-    	scroll-behavior: auto !important;
- 		}
-	}
-
-/* ------------------- */
-/* Utility classes     */
-/* ------------------- */
-
-.flex {
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.title {
-	font-size: 2rem;
-	font-weight: 600;
-	color: var(--cl-dark-blue);
-}
-
-</style>
