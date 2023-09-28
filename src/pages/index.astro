@@ -12,7 +12,7 @@ import Podcasts from "../components/Podcasts.astro";
 <Layout title="Pablo Galfré">
   <section class="hero" style={`background-image: url(${home.src});`}>
     <h2 id="title">Periodismo</h2>
-      <!-- <h2>Podcast</h2>
+    <!-- <h2>Podcast</h2>
       <h2>Documentales</h2> -->
   </section>
   <Biografia />
@@ -23,8 +23,8 @@ import Podcasts from "../components/Podcasts.astro";
   <Podcasts />
 </Layout>
 
-<style is:global>
- .hero {
+<style>
+  .hero {
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -47,55 +47,10 @@ import Podcasts from "../components/Podcasts.astro";
   .img-bio {
     max-width: 300px;
   }
-
-  .articulo {
-    margin-block: 1rem;
-    background-color: var(--cl-ligther-blue);
-    box-shadow:
-      0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-      0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-  }
-
-  .img-articulos {
-    padding: 0.5rem;
-    border-radius: 15px;
-    max-width: 300px;
-  }
-
-  .podcast-section-wrapper {
-    background-color: var(--cl-ligth-blue);
-    margin-block: 2rem;
-  }
-
-  .title-podcast {
-    width: min(100% - 2rem, 1440px);
-    margin-inline: auto;
-  }
-
-  .flex-podcast {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .podcast-wrapper {
-    color: var(--cl-white);
-  }
-
-  .podcast-wrapper img {
-    border-radius: 8px;
-  }
-
-  @media (max-width: 830px) {
-    .flex-podcast {
-      flex-direction: column;
-    }
-  }
 </style>
 
 <script>
-
-const titles = ["Periodismo", "Podcast", "Documentales"];
+  const titles = ["Periodismo", "Podcast", "Documentales"];
   let title = titles[0];
 
   const changeTitle = () => {
@@ -106,5 +61,4 @@ const titles = ["Periodismo", "Podcast", "Documentales"];
   };
 
   setInterval(changeTitle, 2000);
- 
 </script>

@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Libro from "../components/Libro.astro";
 import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
 import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg';
-import LibrosData from '../data/libros.js';
+import { LibrosData } from "../data/librosData.js"
 
-console.log(LibrosData)
+console.log(LibrosData[0])
 ---
 
 <Layout title="Libros">
@@ -99,6 +99,7 @@ console.log(LibrosData)
 
 const $libroMain = document.querySelector("#main-libro");
 const $librosLista = document.querySelectorAll(".card");
+
 
 
 

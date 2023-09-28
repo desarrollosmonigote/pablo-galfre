@@ -1,18 +1,29 @@
 ---
 import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
+export interface Props {
+  id: number
+  title: string
+  img: string
+  fecha: string, 
+  descripcion: string
+}
+
+const {
+  id,
+  title,
+  fecha, 
+  descripcion,
+  img
+} = Astro.props
 ---
 
 <div class="main-libros-wrapper">
-  <img src={libroLaComunidad.src} alt="" />
+  <img src={img} alt="" />
   <div>
-    <h3>La comunidad, viaje a los abismos de una granja de rehabilitación</h3>
-    <span class="fecha">Abril 2014</span>
+    <h3>{title}</h3>
+    <span class="fecha">{fecha}</span>
     <p>
-      Autor de este libro de investigación, editado por Sudestada en 2017, que
-      posibilitó el cierre de dos granjas de rehabilitación y, por primera vez
-      en la historia de Argentina, la elevación a juicio de una muerte dudosa en
-      una institución de salud mental.
-    </p>
+     {descripcion}
   </div>
 
   <style>
