@@ -7,24 +7,32 @@ import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
   <section class="section podcast">
     <div class="podcast-wrapper">
       <div class="flex-podcast">
-        <img
-          src={muertePodcast.src}
-          alt="imagen del podcast Muertes en el internado"
-        />
-        <div>
-          <h3 class="podcast-title">Muertes en el internado</h3>
-          <p class="text text-podcast">
-            El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de
-            carbono en un incendio en ese centro de “salud mental” del norte del
-            Gran Buenos Aires. El hecho no tuvo casi cobertura mediática, pese a
-            que se sabía incluso que el lugar no contaba con habilitación del
-            Ministerio de Salud bonaerense. ¿Quién es Alejandro Merenzon,
-            responsable de que varios de esos jóvenes fueran internados en esa
-            comunidad y que hace décadas lucra con la vida y la muerte de
-            consumidores problemáticos de drogas? ¿Qué rol cumple el Órgano de
-            Revisión de la Ley de Salud Mental provincial?
-          </p>
-          <button class="btn ver-mas">Ver más</button>
+        <a href="./podcast.html">
+          <img
+            src={muertePodcast.src}
+            alt="imagen del podcast Muertes en el internado"
+            style="view-transition-name: podcast"
+          />
+        </a>
+        <div class="wrapper-rigth">
+          <div>
+            <h3 class="podcast-title">Muertes en el internado</h3>
+            <p class="text text-podcast">
+              El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de
+              carbono en un incendio en ese centro de “salud mental” del norte
+              del Gran Buenos Aires. El hecho no tuvo casi cobertura mediática,
+              pese a que se sabía incluso que el lugar no contaba con
+              habilitación del Ministerio de Salud bonaerense.
+            </p>
+            <p>
+              ¿Quién es Alejandro Merenzon, responsable de que varios de esos
+              jóvenes fueran internados en esa comunidad y que hace décadas
+              lucra con la vida y la muerte de consumidores problemáticos de
+              drogas? ¿Qué rol cumple el Órgano de Revisión de la Ley de Salud
+              Mental provincial?
+            </p>
+          </div>
+          <a href="./podcast.html" class="btn ver-mas">Ver más</a>
         </div>
       </div>
     </div>
@@ -46,12 +54,40 @@ import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
     gap: 1rem;
   }
 
+  .flex-podcast > div {
+    flex-grow: 1;
+    flex-basis: 1;
+  }
+
   .podcast-wrapper {
     color: var(--cl-white);
   }
 
+  .podcast-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .text-podcast {
+    margin-bottom: .8rem;
+  }
+
   .podcast-wrapper img {
+    width: 500px;
     border-radius: 8px;
+  }
+
+  .wrapper-rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ver-mas {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
 
   @media (max-width: 830px) {

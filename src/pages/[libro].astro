@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { LibrosData } from "../data/librosData";
+import Card from "../components/Card.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { libro: "la-comunidad" } },
+    { params: { libro: "gatillo-facil" } },
+    { params: { libro: "requiem" } },
+  ];
+}
+
+const { libro } = Astro.params;
+
+const info = LibrosData.find((index) => index.id === libro);
+
+const aside = LibrosData.filter((libros) => libros.id !== libro);
+
+if (!info) {
+  return Astro.redirect("/404");
+}
+---
+
+<Layout title={`Libro ${info.title}`}>
+  <main>
+    <h2 class="title title-libros">Libros</h2>
+    <section class="section wrapper">
+      <div class="main-libros-wrapper">
+        <img
+          src={info.img}
+          alt=""
+          style={`view-transition-name: book-${info.id}`}
+        />
+        <div>
+          <h3>{info.title}</h3>
+          <span class="fecha">{info.fecha}</span>
+          <p>
+            {info.descripcion}
+          </p>
+        </div>
+      </div>
+      <aside class="aside">
+        {
+          aside.map((libro) => {
+            return <Card img={libro.img} title={libro.title} id={libro.id} fecha={libro.fecha} descripcion={libro.descripcion} />;
+          })
+        }
+      </aside>
+    </section>
+  </main>
+
+ 
+</Layout>
+
+<style>
+    .title-libros {
+      text-align: center;
+      padding-block: 1rem;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+    }
+
+    /*Libro central*/
+    .main-libros-wrapper {
+      display: flex;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .main-libros-wrapper img {
+      padding: 0.5rem;
+    }
+    img {
+        border-radius: 10px;
+    }
+  </style>

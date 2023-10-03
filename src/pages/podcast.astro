@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
+
+---
+
+<Layout title="Podcast">
+  <section class="section podcast">
+    <h2 class="title">Podcast</h2>
+    <img src={muertePodcast.src} alt="" style="view-transition-name: podcast"/>
+    <button>Escuchar en Podimo</button>
+    <h3><span>(2014)</span>Muertes en el internado</h3>
+    <p><span>Emitido por:</span>Podimo</p>
+    <p><span>Narrado por:</span>Dolores Fonzi</p>
+    <p><span>Producida por:</span>La maldita TV</p>
+    <p><span>Duración por episodio:</span>33 minutos aprox.</p>
+    <p>
+      El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de carbono
+      en un incendio en ese centro de “salud mental” del norte del Gran Buenos
+      Aires. El hecho no tuvo casi cobertura mediática, pese a que se sabía
+      incluso que el lugar no contaba con habilitación del Ministerio de Salud
+      bonaerense. ¿Quién es Alejandro Merenzon, responsable de que varios de
+      esos jóvenes fueran internados en esa comunidad y que hace décadas lucra
+      con la vida y la muerte de consumidores problemáticos de drogas? ¿Qué rol
+      cumple el Órgano de Revisión de la Ley de Salud Mental provincial?
+    </p>
+
+    <p>
+      Idea original, investigación periodística y co-guionista de Muertes en el
+      internado, el primer podcast documental true crimen de Argentina, basado
+      en mi libro “La Comunidad”. También tuve el placer profesional de hacer la
+      voz en off del podcast, además de ser el conductor que acompaña el
+      desarrollo de las historias de los verdaderos protagonistas de la trama.
+    </p>
+  </section>
+</Layout>
+
+<style>
+    .title {
+        text-align: center;
+        margin-block: 2rem;
+    }
+    img {
+        max-width: 300px;
+    }
+</style>

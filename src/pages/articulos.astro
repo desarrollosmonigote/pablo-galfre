@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="articulos">
+  <main>
+    <h2 class="title title-articulos">Artículos</h2>
+    <section class="wrapper">
+      <section class="section">
+        <div class="main-articulos-wrapper">
+          <div>
+            <h3>El fetiche diferente</h3>
+            <p>
+              Autor de este libro de investigación, editado por Sudestada en
+              2017, que posibilitó el cierre de dos granjas de rehabilitación y,
+              por primera vez en la historia de Argentina, la elevación a juicio
+              de una muerte dudosa en una institución de salud mental.
+            </p>
+          </div>
+          <div>
+            <h3>Rebelión en la granja</h3>
+            <p>
+              Autor de este libro de investigación, editado por Sudestada en
+              2017, que posibilitó el cierre de dos granjas de rehabilitación y,
+              por primera vez en la historia de Argentina, la elevación a juicio
+              de una muerte dudosa en una institución de salud mental.
+            </p>
+          </div>
+          <div>
+            <h3>Masacre en la granja Resilencia San Fernando</h3>
+            <p>
+              Autor de este libro de investigación, editado por Sudestada en
+              2017, que posibilitó el cierre de dos granjas de rehabilitación y,
+              por primera vez en la historia de Argentina, la elevación a juicio
+              de una muerte dudosa en una institución de salud mental.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <style>
+    .title-articulos {
+      text-align: center;
+      padding-block: 1rem;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: 3fr;
+    }
+
+    /*Libro central*/
+    .main-articulos-wrapper {
+      display: flex;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</Layout>

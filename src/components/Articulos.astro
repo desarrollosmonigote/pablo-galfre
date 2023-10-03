@@ -1,5 +1,7 @@
 ---
 import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
+import rebelion from '../assets/img/articulos/articulos-rebelion.jpeg'
+import masacre from '../assets/img/articulos/articulos-masacre.jpg'
 
 ---
 
@@ -15,7 +17,7 @@ import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
     
   </div>
   <div class="articulo flex">
-    <img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
+    <img class="img img-articulos" src={rebelion.src} alt="imagen del artículo El fetiche diferente">
     <div>
       <h3 class="articulo-title">Rebelión en la granja</h3>
       <p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
@@ -24,7 +26,7 @@ import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
     
   </div>
   <div class="articulo flex">
-    <img class="img img-articulos" src="" alt="imagen del artículo El fetiche diferente">
+    <img class="img img-articulos" src={masacre.src} alt="imagen del artículo El fetiche diferente">
     <div>
       <h3 class="articulo-title">Masacre en la granja Resilencia San Fernando</h3>
       <p class="text articulo-text">Articulo publicado en la revista C del diario Crítica (2008) y en Emeequis (México). Ustedes dirán que exagero, pero les juro que no es así. Ya verán. Todo empezó por</p>
@@ -47,6 +49,13 @@ import elFetiche from '../assets/img/articulos/articulos-el-fetiche.jpeg'
     padding: 0.5rem;
     border-radius: 15px;
     max-width: 300px;
+  }
+
+  .articulo-title {
+    padding-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
 </style>

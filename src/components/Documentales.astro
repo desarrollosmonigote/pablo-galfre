@@ -1,3 +1,72 @@
+---
+import { DocuData } from "../data/docuData";
+import Documental from "../components/Documental.astro"
+
+---
+
 <section class="section documentales">
   <h2 class="title">Documentales</h2>
+  <swiper-container class="mySwiper swiper-container-docu" init="false">
+    {
+      DocuData.map((book) => {
+        return (
+          <swiper-slide>
+            <Documental id={book.id} img={book.img} title={book.title} fecha={book.lanzamiento} descripcion={book.descripcion}/>
+          </swiper-slide>
+        );
+      })
+    }
+  </swiper-container>
 </section>
+
+<style>
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    width: 112px;
+    height: 90px;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide {
+    display: block;
+    object-fit: cover; 
+  }
+
+ 
+</style>
+
+<script>
+  const swiperEl = document.querySelector(".swiper-container-docu");
+  Object.assign(swiperEl, {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 40,
+      },
+    },
+  });
+  swiperEl.initialize();
+
+   
+</script>

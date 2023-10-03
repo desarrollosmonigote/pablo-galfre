@@ -21,6 +21,7 @@ import Podcasts from "../components/Podcasts.astro";
   <Documentales />
   <Articulos />
   <Podcasts />
+  
 </Layout>
 
 <style>
@@ -35,7 +36,7 @@ import Podcasts from "../components/Podcasts.astro";
     display: flex;
     justify-content: flex-end;
   }
-
+  
   .hero h2 {
     color: var(--cl-white);
     font-weight: 600;
@@ -43,11 +44,11 @@ import Podcasts from "../components/Podcasts.astro";
     align-self: center;
     margin-right: 1rem;
   }
-
+  
   .img-bio {
     max-width: 300px;
   }
-</style>
+  </style>
 
 <script>
   const titles = ["Periodismo", "Podcast", "Documentales"];
@@ -62,3 +63,4 @@ import Podcasts from "../components/Podcasts.astro";
 
   setInterval(changeTitle, 2000);
 </script>
+

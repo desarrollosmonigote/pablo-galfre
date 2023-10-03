@@ -1,42 +1,22 @@
 ---
-import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
-import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
-import libroRequiem from "../assets/img/libros/libro-requiem.jpeg";
 import Libro from "./Libro.astro";
 import { LibrosData } from "../data/librosData";
----
 
+---
 <section class="section libros">
   <h2 class="title">Libros</h2>
-  <swiper-container
-    class="mySwiper"
-    pagination="true"
-    pagination-clickable="true"
-    space-between="30"
-    slides-per-view="3">
-    <swiper-slide><img src={libroGatillo.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroLaComunidad.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroRequiem.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroGatillo.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroLaComunidad.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroRequiem.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroGatillo.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroLaComunidad.src} alt="" /></swiper-slide>
-    <swiper-slide><img src={libroRequiem.src} alt="" /></swiper-slide>
-  </swiper-container>
-</section>
-<section>
-  <ul>
+
+  <swiper-container class="mySwiper" init="false">
     {
       LibrosData.map((book) => {
         return (
-          <li>
-          <Libro id={book.id} title={book.title} descripcion={book.descripcion} img={book.img} />
-          </li>
-        )
+          <swiper-slide>
+            <Libro id={book.id} img={book.img} title={book.title} fecha={book.fecha} descripcion={book.descripcion}/>
+          </swiper-slide>
+        );
       })
     }
-  </ul>
+  </swiper-container>
 </section>
 
 <style>
@@ -47,17 +27,50 @@ import { LibrosData } from "../data/librosData";
 
   swiper-slide {
     width: 312px;
-    height: 176px;
+    height: 200px;
     text-align: center;
-    font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  swiper-slide img {
+  swiper-slide {
     display: block;
-    object-fit: cover;
+    object-fit: cover; 
   }
+
+ 
 </style>
+
+<script>
+  const swiperEl = document.querySelector("swiper-container");
+  Object.assign(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+  swiperEl.initialize();
+
+    // Escucha el evento `astro:content:updated`
+    addEventListener("contentUpdated", () => {
+    // Vuelve a renderizar la galería
+    swiperEl.initialize();
+  });
+</script>
