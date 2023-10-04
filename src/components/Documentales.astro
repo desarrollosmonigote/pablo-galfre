@@ -6,7 +6,7 @@ import Documental from "../components/Documental.astro"
 
 <section class="section documentales">
   <h2 class="title">Documentales</h2>
-  <swiper-container class="mySwiper swiper-container-docu" init="false">
+  <!-- <swiper-container class="mySwiper swiper-container-docu" init="false">
     {
       DocuData.map((book) => {
         return (
@@ -16,14 +16,39 @@ import Documental from "../components/Documental.astro"
         );
       })
     }
-  </swiper-container>
+  </swiper-container> -->
+  <div class="carrusel">
+    {
+      DocuData.map((ele) => {
+        return(
+          <div class="elemento">
+            <Documental id={ele.id} img={ele.img} title={ele.title} lanzamiento={ele.lanzamiento} descripcion={ele.descripcion}/>
+          </div>
+        )
+      })
+    }
+
+  </div>
 </section>
 
 <style>
-  swiper-container {
+
+  .carrusel {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
   }
+  .elemento {
+    flex: 1 0 auto;
+    margin: 0 20px;
+    width: 112px;
+    height: 90px;
+  }
+ 
 
   swiper-slide {
     width: 112px;
@@ -43,30 +68,3 @@ import Documental from "../components/Documental.astro"
  
 </style>
 
-<script>
-  const swiperEl = document.querySelector(".swiper-container-docu");
-  Object.assign(swiperEl, {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    pagination: {
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 6,
-        spaceBetween: 40,
-      },
-    },
-  });
-  swiperEl.initialize();
-
-   
-</script>
