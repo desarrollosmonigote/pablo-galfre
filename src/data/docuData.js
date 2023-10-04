@@ -10,7 +10,7 @@ export const DocuData = [
     lanzamiento: "Abril 2014",
     img: "https://pics.filmaffinity.com/Los_ladrones_La_verdadera_historia_del_robo_del_siglo-943224348-large.jpg",
     descripcion:
-      "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
+      "Producción periodística de Los Ladrones, documental que narra la historia del robo al Banco Río de Acassuso, en 2006. Producido por Anima Films y emitido por Netflix. ",
   },
   {
     id: "antes-de-que-nos-olvide",
@@ -22,7 +22,7 @@ export const DocuData = [
     lanzamiento: "Abril 2014",
     img: "https://pics.filmaffinity.com/Los_ladrones_La_verdadera_historia_del_robo_del_siglo-943224348-large.jpg",
     descripcion:
-      "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
+      "Idea original, producción periodística y co-guionista de Antes de que nos olviden, documental sobre la denominada “guerra al narco” de México. Producido por Anima Films y emitido en diciembre de 2014 por HBO. Nominada a los Premios Emmy Internaciones 2015 a mejor documental.",
   },
   {
     id: "el-rati-horro-show",
@@ -37,8 +37,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "arrependitos",
+    title: "Arrepentidos",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -49,8 +49,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "buscando-asilo",
+    title: "Buscando asilo",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -61,8 +61,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "confesiones-de-un-sicario",
+    title: "Confesiones de un sicario",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -73,8 +73,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "quien-mato-a-pablo-escobar",
+    title: "¿Quién mató a Pablo Escobar?",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -85,8 +85,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "la-busqueda-de-la-tierra-sin-mal",
+    title: "La búsqueda de la tierra sin mal",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -97,8 +97,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "la-opera-anna-bolena",
+    title: "La ópera Anna Bolena",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -109,8 +109,8 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "the-pope-of-hope",
+    title: "The Pope of hope",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",
@@ -121,8 +121,20 @@ export const DocuData = [
       "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
   },
   {
-    id: "los-ladrones",
-    title: "los ladrones: la verdadera historia del robo del siglo",
+    id: "peronismo-sentimiento-movilizacion",
+    title: "Peronismo. Sentimiento y movilización",
+    genero: "Policial",
+    produccion: "Netflix",
+    dirección: "Doe",
+    rol: "",
+    lanzamiento: "Abril 2014",
+    img: "https://pics.filmaffinity.com/Los_ladrones_La_verdadera_historia_del_robo_del_siglo-943224348-large.jpg",
+    descripcion:
+      "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
+  },
+  {
+    id: "la-red-nazi-en-mexico",
+    title: "La red nazi en México",
     genero: "Policial",
     produccion: "Netflix",
     dirección: "Doe",

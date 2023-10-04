@@ -10,18 +10,18 @@ export interface Props {
 const { id, title, descripcion, img } = Astro.props;
 ---
 
-<div class="main-libros-wrapper">
-  <a class="img-libros" href={`/${id}`}>
+<div class="main-docus-wrapper">
+  <a class="img-docu" href={`/${id}`}>
     <img
       src={img}
-      alt={`Portada del libro ${title}`}
+      alt={`Portada del documental ${title}`}
       style={`view-transition-name: book-${id}`}
     />
   </a>
 </div>
 
 <style>
-  .main-libros-wrapper {
+  .main-docus-wrapper {
     display: flex;
     border-radius: 8px;
     background: #fff;
@@ -31,7 +31,7 @@ const { id, title, descripcion, img } = Astro.props;
   img {
     border-radius: 4px;
   }
-  .img-libros:hover {
+  .img-docu:hover {
     transform: scale(1.05);
     transition: all 0.3s ease
   }

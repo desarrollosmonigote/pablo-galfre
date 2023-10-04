@@ -1,15 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { DocuData } from "../data/docuData";
-import Card from "../components/Card.astro";
+import CardDocu from "../components/CardDocu.astro";
 
-// export function getStaticPaths() {
-//   return [
-//     { params: { docu: "los-ladrones" } },
-//     { params: { docu: "gatillo-facil" } },
-//     { params: { docu: "requiem" } },
-//   ];
-// }
 
 export  function getStaticPaths() {
     return DocuData.map(docu => ({
@@ -23,6 +16,8 @@ const { docu } = Astro.params;
 
 const info = DocuData.find((index) => index.id === docu);
 
+const grid = DocuData.filter((index) => index.id !== docu);
+
 
 if (!info) {
   return Astro.redirect("/404");
@@ -31,7 +26,7 @@ if (!info) {
 
 <Layout title={`Libro ${info.title}`}>
   <main>
-    <h2 class="title title-libros">Libros</h2>
+    <h2 class="title title-libros">Documentales</h2>
     <section class="section wrapper">
       <div class="main-libros-wrapper">
         <img
@@ -48,7 +43,20 @@ if (!info) {
         </div>
       </div>
     </section>
+    <section class="grid section">
+
+        {
+            grid.map((info) => {
+                return(
+                    <CardDocu id={info.id} img={info.img} genero={info.genero} title={info.title} lanzamiento={info.lanzamiento} descripcion={info.descripcion} />
+
+                )
+            })
+        }
+
+    </section>
   </main>
+
 
  
 </Layout>
@@ -75,6 +83,12 @@ if (!info) {
       padding: 0.5rem;
     }
     img {
+        max-width: 300px;
         border-radius: 10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
     }
   </style>
