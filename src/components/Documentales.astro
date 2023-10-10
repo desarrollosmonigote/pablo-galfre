@@ -6,7 +6,8 @@ import Documental from "../components/Documental.astro"
 
 <section class="section documentales">
   <h2 class="title">Documentales</h2>
-  <!-- <swiper-container class="mySwiper swiper-container-docu" init="false">
+  <swiper-container class="mySwiper swiper-container-docu" space-between="30"
+  slides-per-view="6" pagination="true">
     {
       DocuData.map((book) => {
         return (
@@ -16,43 +17,15 @@ import Documental from "../components/Documental.astro"
         );
       })
     }
-  </swiper-container> -->
-  <div class="carrusel">
-    {
-      DocuData.map((ele) => {
-        return(
-          <div class="elemento">
-            <Documental id={ele.id} img={ele.img} title={ele.title} lanzamiento={ele.lanzamiento} descripcion={ele.descripcion}/>
-          </div>
-        )
-      })
-    }
+  </swiper-container>
 
-  </div>
 </section>
 
 <style>
 
-  .carrusel {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    justify-content: center;
-    align-items: center;
-  }
-  .elemento {
-    flex: 1 0 auto;
-    margin: 0 20px;
-    width: 112px;
-    height: 90px;
-  }
- 
-
   swiper-slide {
-    width: 112px;
-    height: 90px;
+    width: 139px;
+    height: 133px;
     text-align: center;
     background: #fff;
     display: flex;
@@ -64,7 +37,5 @@ import Documental from "../components/Documental.astro"
     display: block;
     object-fit: cover; 
   }
-
- 
 </style>
 

@@ -12,10 +12,12 @@ const { id, title, fecha, descripcion, img } = Astro.props;
 
 <div class="card">
   <a href={`/${id}`}>
-    <div>
+    <div class="card-wrapper">
       <img src={img} alt="" />
-      <h3>{title}</h3>
-      <h2>{fecha}</h2>
+      <div>
+        <h3>{title}</h3>
+        <h2>{fecha}</h2>
+      </div>
     </div>
     <p class="text"></p>
   </a>
@@ -27,9 +29,18 @@ const { id, title, fecha, descripcion, img } = Astro.props;
     background: #fff;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
     margin-bottom: 1rem;
+    padding: 12px;
   }
-  .card img {
-    max-height: 250px;
+
+  .card-wrapper{
+    display: flex;
+    gap: 1rem;
+
+  }
+
+  .card-wrapper > img{
+    width: 155px;
+    height: 134px;
     object-fit: cover;
     border-radius: 10px;
   }

@@ -21,24 +21,28 @@ const { id, title, lanzamiento, descripcion, genero, img } = Astro.props;
         <p>{lanzamiento}</p>
       </div>
     </div>
-    <p class="text">{descripcion}</p>
+    <p class="text">{descripcion.slice(0,90)}...</p>
   </a>
 </div>
 
 <style>
   .card {
-    border-radius: 8px;
     background: #fff;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
     margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 0.7rem;
   }
 
-  .card-wrapper{
+  .card-wrapper {
     display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
-  .card img {
-    max-height: 150px;
+  .card-wrapper > img {
+    max-width: 150px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 7px;
+
   }
 </style>

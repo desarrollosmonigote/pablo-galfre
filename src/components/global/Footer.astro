@@ -6,7 +6,7 @@
  <div class="footer-wrapper">
   <p>1125658599 | pablogalfre@gmail.com</p>
   <ul class="social-items">
-    <li><a href="https://www.instagram.com/pablo_galfre/"target=”_blank” rel=”noopener noreferrer“><i class="fa-brands fa-square-instagram fa-lg" style="color: #829cc0;"></i></a></li>
+    <li><a href="https://www.instagram.com/pablo_galfre/"target=”_blank” rel=”noopener noreferrer“><i class="fa-brands fa-instagram"style="color: #829cc0;"></i></a></li>
     <li><a href="https://www.facebook.com/pablo.galfre.1/" target=”_blank” rel=”noopener noreferrer“><i class="fa-brands fa-facebook fa-lg" style="color: #829cc0;"></i></a></li>
   </ul>
   <p>
@@ -22,7 +22,6 @@
   footer {
     background-color: var(--cl-dark-blue);
     color: var(--cl-white);
-   
   }
   .footer-wrapper {
     width: min(100% - 1rem, 1440px);
@@ -35,7 +34,15 @@
 
   ul {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    display: flex;
+    gap: 2rem;
+  }
+
+  ul > li > a > i {
+    font-size: 30px;
   }
 
   @media (max-width: 820px) {
