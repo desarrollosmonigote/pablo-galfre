@@ -1,32 +1,63 @@
 ---
-import galfreBio from '../../assets/img/galfre-rostro.png'
-
+import galfreBio from "../../assets/img/galfre-rostro-2.png";
 ---
 
 <section class="section textos bio">
-  <h2 class="title">Proyecto / Bio</h2>
+  <h2 class="title">Sobre mí</h2>
   <div class="flex">
-    <img class="img-bio" src={galfreBio.src} alt="imagen del rostro de Pablo Galfré">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat delectus consequuntur quisquam. Ea a illum nulla excepturi dolores iusto? Nesciunt atque praesentium cupiditate nihil tenetur unde quaerat eos quae.</p>
+    <div>
+      <p>
+        Soy tan sólo un incansable periodista e investigador que siempre busca
+        de historias interesantes por contar y vivir.
+      </p>
+      <p>
+        Si bien me dedico al periodismo y la producción de documentales, en
+        estos momentos me interesa remarcar que, a partir de los resultados que
+        tuvieron mis investigaciones periodísticas (inocentes liberados,
+        manicomios clausurados, homicidios culposos elevados a juicio), también
+        me desempeño como investigador judicial, sobre todo en casos de
+        inocentes condenados.
+      </p>
+      <p>
+        En televisión, fuí productor periodístico de Cámara testigo (América,
+        2005), Blog, periodismo de autor (Canal 9, 2006) y cronista de Cámara en
+        mano (Telefé, 2006), entre otros ciclos.
+      </p>
+      <p>
+        Uno de los grandes placeres que me di como periodista de investigación
+        fue idear, investigar y producir el documental El Rati Horror Show,
+        dirigido por Enrique Piñeyro, film que posibilitó la libertad de un
+        inocente preso. El caso fue conocido como la Masacre de Pompeya.
+      </p>
+    </div>
+    <img
+      class="img-bio"
+      src={galfreBio.src}
+      alt="imagen del rostro de Pablo Galfré"
+    />
   </div>
 </section>
 
-
 <style>
   .section {
-		width: min(100% - 2rem, 1440px);
-  		margin-inline: auto;
-		padding-block: 1rem;
-	}
+    width: min(100% - 2rem, 1440px);
+    margin-inline: auto;
+    padding-block: 1rem;
+  }
 
-	.img-bio {
-		max-width: 300px;
-	}
+  div > p {
+    padding-rigth: 2rem;
+	margin-bottom: .8rem;
+  }
 
-	@media (max-width: 600px) {
-		.flex {
-			flex-direction: column;
-		}	
-	}
+  .img-bio {
+    max-width: 300px;
+	object-fit: cover;
+  }
 
+  @media (max-width: 600px) {
+    .flex {
+      flex-direction: column;
+    }
+  }
 </style>
