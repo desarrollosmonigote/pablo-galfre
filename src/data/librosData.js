@@ -1,5 +1,4 @@
 import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
-import libroRequiem from "../assets/img/libros/libro-requiem.jpeg";
 import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
 
 export const LibrosData = [
@@ -18,11 +17,5 @@ export const LibrosData = [
     img: `${libroGatillo.src}`,
     descripcion: "Descripción del Libro 2",
   },
-  {
-    id: "requiem",
-    title: "Requiem",
-    fecha: "Abril 2014",
-    img: `${libroRequiem.src}`,
-    descripcion: "Réquiems es (fue) un experimento de divague alrededor de la finitud y las penas (capitales). Es una pregunta constante de si realmente todo está perdido. ¿Acaso a veces no sucede que la condena en realidad no es esa que mora amenazante ante nosotros? Sino otra, que como un camaleón se esconde tras de sí mismo; o como un oxímoron, donde yacen tanto variedades contradictorias como posibles.Réquiems es (será) una duda sobre el mal que residirá, perene, en vuestras cabezas.",
-  },
+
 ];

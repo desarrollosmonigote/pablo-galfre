@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import libroLaComunidad from "../assets/img/libros/libro-la-comunidad.jpeg";
-import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg';
-
+import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
 ---
 
 <Layout title="Libros">
@@ -13,75 +12,79 @@ import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg';
         <div class="main-libros-wrapper" id="main-libro">
           <img src={libroLaComunidad.src} alt="" />
           <div>
-            <h3>La comunidad, viaje a los abismos de una granja de rehabilitación</h3>
+            <h3>
+              La comunidad, viaje a los abismos de una granja de rehabilitación
+            </h3>
             <span class="fecha">Abril 2014</span>
             <p>
-              Autor de este libro de investigación, editado por Sudestada en 2017, que
-              posibilitó el cierre de dos granjas de rehabilitación y, por primera vez
-              en la historia de Argentina, la elevación a juicio de una muerte dudosa en
-              una institución de salud mental.
+              Autor de este libro de investigación, editado por Sudestada en
+              2017, que posibilitó el cierre de dos granjas de rehabilitación y,
+              por primera vez en la historia de Argentina, la elevación a juicio
+              de una muerte dudosa en una institución de salud mental.
             </p>
           </div>
+        </div>
+        <aside class="section">
+          <div class="card" data-book-id="1">
+            <div>
+              <img src={libroGatillo.src} alt="" />
+              <h3>Gatillo fácil</h3>
+              <h2>Fecha</h2>
+            </div>
+            <p class="text">
+              Réquiems es (fue) un experimento de divague alrededor de la
+              finitud y las penas (capitales). Es una pregunta constante de si
+              realmente todo está perdido. ¿Acaso a veces no sucede que la
+              condena en realidad no es esa que mora amenazante ante nosotros?
+              Sino otra, que como un camaleón se esconde tras de sí mismo; o
+              como un oxímoron, donde yacen tanto variedades contradictorias
+              como posibles.
+            </p>
+          </div>
+          <div class="card" data-book-id="2">
+            <div>
+              <img src="" alt="" />
+              <h3>Gatillo fácil</h3>
+              <h2>Fecha</h2>
+            </div>
+            <p class="text">
+              Réquiems es (fue) un experimento de divague alrededor de la
+              finitud y las penas (capitales). Es una pregunta constante de si
+              realmente todo está perdido. ¿Acaso a veces no sucede que la
+              condena en realidad no es esa que mora amenazante ante nosotros?
+              Sino otra, que como un camaleón se esconde tras de sí mismo; o
+              como un oxímoron, donde yacen tanto variedades contradictorias
+              como posibles.
+            </p>
+          </div>
+        </aside>
       </section>
-      <aside class="section">
-        <div class="card" data-book-id="1">
-          <div>
-            <img src={libroGatillo.src} alt="" />
-            <h3>Gatillo fácil</h3>
-            <h2>Fecha</h2>
-          </div>
-          <p class="text">
-            Réquiems es (fue) un experimento de divague alrededor de la finitud
-            y las penas (capitales). Es una pregunta constante de si realmente
-            todo está perdido. ¿Acaso a veces no sucede que la condena en
-            realidad no es esa que mora amenazante ante nosotros? Sino otra, que
-            como un camaleón se esconde tras de sí mismo; o como un oxímoron,
-            donde yacen tanto variedades contradictorias como posibles.
-          </p>
-        </div>
-        <div class="card" data-book-id="2">
-          <div>
-            <img src="" alt="" />
-            <h3>Gatillo fácil</h3>
-            <h2>Fecha</h2>
-          </div>
-          <p class="text">
-            Réquiems es (fue) un experimento de divague alrededor de la finitud
-            y las penas (capitales). Es una pregunta constante de si realmente
-            todo está perdido. ¿Acaso a veces no sucede que la condena en
-            realidad no es esa que mora amenazante ante nosotros? Sino otra, que
-            como un camaleón se esconde tras de sí mismo; o como un oxímoron,
-            donde yacen tanto variedades contradictorias como posibles.
-          </p>
-        </div>
-      </aside>
     </section>
   </main>
-</Layout>
 
-<style>
-  .title-libros {
-    text-align: center;
-    padding-block: 1rem;
-  }
-  .wrapper {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
+  <style>
+    .title-libros {
+      text-align: center;
+      padding-block: 1rem;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
 
-  .card {
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
-    margin-bottom: 1rem;
-  }
-  .card img {
-    max-height: 250px;
-    object-fit:cover
-  }
+    .card {
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+      margin-bottom: 1rem;
+    }
+    .card img {
+      max-height: 250px;
+      object-fit: cover;
+    }
 
-  /*Libro central*/
-  .main-libros-wrapper {
+    /*Libro central*/
+    .main-libros-wrapper {
       display: flex;
       border-radius: 8px;
       background: #fff;
@@ -90,4 +93,5 @@ import libroGatillo from '../assets/img/libros/libro-gatillo-facil.jpeg';
     .main-libros-wrapper img {
       padding: 0.5rem;
     }
-</style>
+  </style>
+</Layout>

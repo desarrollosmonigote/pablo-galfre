@@ -1,27 +1,35 @@
 ---
 import Libro from "./Libro.astro";
 import { LibrosData } from "../data/librosData";
-
 ---
+
 <section class="section libros">
   <h2 class="title">Libros</h2>
 
-  <swiper-container class="mySwiper" space-between="30"
-  slides-per-view="3">
+  <div class="grid">
     {
       LibrosData.map((book) => {
         return (
-          <swiper-slide>
-            <Libro id={book.id} img={book.img} title={book.title} fecha={book.fecha} descripcion={book.descripcion}/>
-          </swiper-slide>
+          <Libro
+            id={book.id}
+            img={book.img}
+            title={book.title}
+            fecha={book.fecha}
+            descripcion={book.descripcion}
+          />
         );
       })
     }
-  </swiper-container>
+  </div>
 </section>
 
 <style>
-  swiper-container {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  /* swiper-container {
     width: 100%;
     height: 100%;
   }
@@ -39,11 +47,7 @@ import { LibrosData } from "../data/librosData";
   swiper-slide {
     display: block;
     object-fit: cover; 
-  }
-
- 
+  } */
 </style>
 
-<script>
-
-</script>
+<script></script>

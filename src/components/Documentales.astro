@@ -1,29 +1,31 @@
 ---
 import { DocuData } from "../data/docuData";
-import Documental from "../components/Documental.astro"
+import Documental from "../components/Documental.astro";
+const firstFourDocs = DocuData.slice(0, 4);
 
 ---
 
 <section class="section documentales">
   <h2 class="title">Documentales</h2>
-  <swiper-container class="mySwiper swiper-container-docu" space-between="30"
-  slides-per-view="6" pagination="true">
+  <div class="grid">
     {
-      DocuData.map((book) => {
+      firstFourDocs.map((book) => {
         return (
-          <swiper-slide>
-            <Documental id={book.id} img={book.img} title={book.title} fecha={book.lanzamiento} descripcion={book.descripcion}/>
-          </swiper-slide>
+          <Documental
+            id={book.id}
+            img={book.img}
+            title={book.title}
+            fecha={book.lanzamiento}
+            descripcion={book.descripcion}
+          />
         );
       })
     }
-  </swiper-container>
-
+  </div>
 </section>
 
 <style>
-
-  swiper-slide {
+  /* swiper-slide {
     max-width: 139px;
     height: 133px;
     text-align: center;
@@ -36,6 +38,11 @@ import Documental from "../components/Documental.astro"
   swiper-slide {
     display: block;
     object-fit: cover; 
+  } */
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
 </style>
-
