@@ -18,21 +18,47 @@ const { id, title, fecha, descripcion, img } = Astro.props;
       style={`view-transition-name: book-${id}`}
     />
   </a>
+  <div class="wrapper-info">
+    <strong>{title}</strong>
+    <strong>{fecha}</strong>
+    <p>{descripcion.slice(0,443)}...</p>
+  </div>
 </div>
 
 <style>
   .main-libros-wrapper {
+    width: 100%;
     display: flex;
+    gap: 0.9rem;
     border-radius: 8px;
+    padding: 0.5rem;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
   img {
     border-radius: 4px;
+    height: 100%;
   }
+
+  .img-libros{
+    width: 100%;
+  }
+
   .img-libros:hover {
     transform: scale(1.05);
     transition: all 0.3s ease
   }
+  .wrapper-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 555px) {
+    .main-libros-wrapper{
+      flex-direction: column;
+    }
+  }
+
 </style>

@@ -26,28 +26,15 @@ import { LibrosData } from "../data/librosData";
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 1rem;
   }
-  /* swiper-container {
-    width: 100%;
-    height: 100%;
-  }
 
-  swiper-slide {
-    width: 312px;
-    height: 200px;
-    text-align: center;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media screen and (max-width: 555px) {
+    .grid{
+      grid-template-columns: repeat(auto-fit, minmax(320px, 555px));
+    }
   }
-
-  swiper-slide {
-    display: block;
-    object-fit: cover; 
-  } */
 </style>
 
 <script></script>
