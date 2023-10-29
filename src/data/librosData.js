@@ -4,18 +4,18 @@ import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
 export const LibrosData = [
   {
     id: "la-comunidad",
-    title: "La comunidad",
-    fecha: "Abril 2014",
+    title: "La comunidad, viaje a los abismos de una granja de rehabilitación ",
+    fecha: "Sudestada 2017",
     img: `${libroLaComunidad.src}`,
     descripcion:
-      "Son parte del paisaje urbano, pero el periodismo nunca se ocupó de ellas. Se las conoce con el nombre de «comunidades terapéuticas» o granjas de rehabilitación, pero detrás de sus intenciones terapéuticas o de recuperación de jóvenes con problemas de adicción, se oculta un negocio millonario y una larga lista de estafadores, vinculados estrechamente con obras sociales, prepagas y sectores del PoderJudicial. La investigación de Pablo Galfré deja al desnudo una oscura trama a partir de un caso: la Fundación San Camilo, escenario de la dudosa muerte de un joven internado. A partir de este caso y transitando la frontera entre la crónica y la novela negra, Galfré se adentra en los laberintos de una comunidad terapéutica y aporta testimonios de pacientes, legajos judiciales y la palabra de los propios responsables. 'La comunidad' no es sólo un libro: es también una herramienta que busca encontrar justicia para tantos pibes maltratados y encerrados en un submundo de estafas, abusos, violencia y verso psicológico, que reaviva viejas discusiones sobre la ausencia del Estado y el lucro como motor de proyectos privados vinculados a la medicina y sustentados, muchas veces, en la desesperación de familiares y amigos.",
+      "Editado por Sudestada en 2017, este libro de investigación periodística narra las historias de cientos de personas que fueron internadas, en contra de su voluntad, y torturadas en dos granjas de rehabilitación de la provincia de Buenos Aires. A su vez, es una investigación detectivesca sobre los misterios detrás de las muertes de Saulo Rojas y Matías Mariñansky. La idea siempre fue que La comunidad no fuera sólo un libro sino también una herramienta de justicia. Así fue como ambas granjas finalmente fueron clausuradas por la justicia y, por primera vez en la historia de Argentina, un empleado de una institución de salud mental fue condenado por el homicidio culposo de un paciente. Es un libro muy querido por mí donde pude plasmas toda mi pasión por el periodismo de investigación y mi militancia por los derechos humanos.",
   },
   {
     id: "gatillo-facil",
     title: "Gatillo fácil",
-    fecha: "Abril 2014",
+    fecha: "2015",
     img: `${libroGatillo.src}`,
-    descripcion: "Descripción del Libro 2",
+    descripcion:
+      "En 2015, después del documental El Rati Horror Show, decidí contar la misma historia en formato novela gráfica, pero desde otro punto de vista. Gatillo es una mezcolanza, un collage, de recortes de diarios, imágenes de TV, expedientes judiciales, dibujos originales y textos a través de los cuales se narra las vivencias de Fernando Carrera dentro de la cárcel y el esfuerzo colectivo de su familia, abogados, militantes y periodistas por liberarlo. “Alguna vez se dijo en estas líneas, a propósito de Notas al pie de Gaza, de Joe Sacco, que el documental en historieta tenía la doble dificultad de por un lado exponer los hechos, ser riguroso en los datos y dar cuenta de su credibilidad y a la vez ofrecer al lector una historia sólida desde lo narrativo. Gatillo Fácil cumple con creces ambas exigencias”, escribió el crítico de Página 12 Andrés Valenzuela. ",
   },
-
 ];
