@@ -4,7 +4,7 @@ import libroGatillo from "../assets/img/libros/libro-gatillo-facil.jpeg";
 export const LibrosData = [
   {
     id: "la-comunidad",
-    title: "La comunidad, viaje a los abismos de una granja de rehabilitación ",
+    title: "La comunidad",
     fecha: "Sudestada 2017",
     img: `${libroLaComunidad.src}`,
     descripcion:
@@ -13,7 +13,7 @@ export const LibrosData = [
   {
     id: "gatillo-facil",
     title: "Gatillo fácil",
-    fecha: "2015",
+    fecha: "Llantodemudo 2015",
     img: `${libroGatillo.src}`,
     descripcion:
       "En 2015, después del documental El Rati Horror Show, decidí contar la misma historia en formato novela gráfica, pero desde otro punto de vista. Gatillo es una mezcolanza, un collage, de recortes de diarios, imágenes de TV, expedientes judiciales, dibujos originales y textos a través de los cuales se narra las vivencias de Fernando Carrera dentro de la cárcel y el esfuerzo colectivo de su familia, abogados, militantes y periodistas por liberarlo. “Alguna vez se dijo en estas líneas, a propósito de Notas al pie de Gaza, de Joe Sacco, que el documental en historieta tenía la doble dificultad de por un lado exponer los hechos, ser riguroso en los datos y dar cuenta de su credibilidad y a la vez ofrecer al lector una historia sólida desde lo narrativo. Gatillo Fácil cumple con creces ambas exigencias”, escribió el crítico de Página 12 Andrés Valenzuela. ",

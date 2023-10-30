@@ -7,7 +7,7 @@ export interface Props {
   descripcion: string;
 }
 
-const { id, title, fecha, descripcion, img } = Astro.props;
+const { id, title,descripcion, img } = Astro.props;
 ---
 
 <div class="card">
@@ -15,11 +15,10 @@ const { id, title, fecha, descripcion, img } = Astro.props;
     <div class="card-wrapper">
       <img src={img} alt="" />
       <div>
-        <h3>{title}</h3>
-        <h2>{fecha}</h2>
+        <strong>{title}</strong>
+        <p class="text">{descripcion.slice(0,127)}...</p>
       </div>
     </div>
-    <p class="text"></p>
   </a>
 </div>
 
@@ -32,16 +31,19 @@ const { id, title, fecha, descripcion, img } = Astro.props;
     padding: 12px;
   }
 
-  .card-wrapper{
+  .card-wrapper {
     display: flex;
     gap: 1rem;
-
   }
 
-  .card-wrapper > img{
+  .card-wrapper > img {
     width: 155px;
     height: 134px;
     object-fit: cover;
     border-radius: 10px;
+  }
+  strong {
+    color: var(--cl-dark-blue);
+    font-size: 1.3rem;
   }
 </style>

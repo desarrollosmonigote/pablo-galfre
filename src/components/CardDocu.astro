@@ -6,23 +6,33 @@ export interface Props {
   lanzamiento: string;
   descripcion: string;
   genero: string;
+  rol: string;
+  produccion: string;
 }
 
-const { id, title, lanzamiento, descripcion, genero, img } = Astro.props;
+const { id, title, lanzamiento, descripcion, genero, img, rol, produccion } =
+  Astro.props;
 ---
 
 <div class="card">
-  <a href={`/${id}`}>
-    <div class="card-wrapper">
-      <img src={img} alt="" />
-      <div>
+  <div class="card-wrapper">
+    <img src={img} alt="" />
+    <div>
+      <div class="flex-title">
         <h3>{title}</h3>
-        <p>{genero}</p>
-        <p>{lanzamiento}</p>
+        <p class="genero">{genero}</p>
+      </div>
+      <div class="flex-info">
+       <div>
+        <p><span>Producción: </span> {produccion}</p>
+        <p><span>Lanzamiento: </span> {lanzamiento}</p>
+       </div>
+        <p><span>Rol: </span> {rol}</p>
       </div>
     </div>
-    <p class="text">{descripcion.slice(0,90)}...</p>
-  </a>
+  </div>
+  <!-- <p class="text">{descripcion.slice(0, 170)}...</p> -->
+  <p class="text">{descripcion}</p>
 </div>
 
 <style>
@@ -40,10 +50,43 @@ const { id, title, lanzamiento, descripcion, genero, img } = Astro.props;
     margin-bottom: 1rem;
   }
   .card-wrapper > img {
-    max-width: 150px;
-    height: 150px;
+    max-width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 7px;
+  }
 
+  .flex-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-title h3 {
+    font-weight: 700;
+    color: var(--cl-dark-blue);
+    font-size: 1.2rem;
+  }
+
+  .flex-info {
+    display: flex;
+    margin-top: .8rem;
+  }
+
+  .flex-info > * {
+    width: 100%;
+  }
+
+  .flex-info span {
+    color: var(--cl-dark-blue);
+    font-weight: 700;
+  }
+
+  .genero {
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    background: #809bbf;
+    padding: 2px 3px;
   }
 </style>

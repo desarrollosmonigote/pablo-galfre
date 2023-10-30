@@ -19,8 +19,8 @@ const { id, title, fecha, descripcion, img } = Astro.props;
     />
   </a>
   <div class="wrapper-info">
-    <strong>{title}</strong>
-    <strong>{fecha}</strong>
+    <strong class="title-libro">{title}</strong>
+    <strong class="sub-title-libro">{fecha}</strong>
     <p>{descripcion.slice(0,457)}...</p>
   </div>
 </div>
@@ -53,6 +53,17 @@ const { id, title, fecha, descripcion, img } = Astro.props;
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  .title-libro {
+    color: var(--cl-dark-blue);
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+  }
+
+  .sub-title-libro {
+    color: var(--cl-dark-blue);
+    margin-bottom: .8rem;
   }
 
   @media screen and (max-width: 555px) {

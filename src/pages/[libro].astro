@@ -33,7 +33,7 @@ if (!info) {
       />
       <div>
         <h3>{info.title}</h3>
-        <span class="fecha">{info.fecha}</span>
+        <p class="fecha">{info.fecha}</p>
 
         <p>
           {info.descripcion}
@@ -92,7 +92,13 @@ if (!info) {
     max-height: 566px;
   }
   h3 {
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--cl-dark-blue);
+    font-size: 1.5rem;
+  }
+
+  .fecha {
+    margin-bottom: .8rem;
   }
 </style>

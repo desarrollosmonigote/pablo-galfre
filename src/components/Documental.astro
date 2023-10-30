@@ -5,9 +5,11 @@ export interface Props {
   img: string;
   fecha: string;
   descripcion: string;
+  rol:string;
+  genero: string;
 }
 
-const { id, title, descripcion, img } = Astro.props;
+const { id, title, descripcion, img, rol, genero } = Astro.props;
 ---
 
 <div class="main-docus-wrapper">
