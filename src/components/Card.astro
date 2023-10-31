@@ -7,7 +7,7 @@ export interface Props {
   descripcion: string;
 }
 
-const { id, title,descripcion, img } = Astro.props;
+const { id, title, descripcion, img } = Astro.props;
 ---
 
 <div class="card">
@@ -16,7 +16,7 @@ const { id, title,descripcion, img } = Astro.props;
       <img src={img} alt="" />
       <div>
         <strong>{title}</strong>
-        <p class="text">{descripcion.slice(0,127)}...</p>
+        <p class="text">{descripcion.slice(0, 127)}...</p>
       </div>
     </div>
   </a>
