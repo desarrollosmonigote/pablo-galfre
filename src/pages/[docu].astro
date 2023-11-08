@@ -69,5 +69,11 @@ const grid = DocuData;
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+  }
+  @media screen and (max-width: 555px) {
+    .grid{
+      grid-template-columns: repeat(auto-fit, minmax(318px, 555px));
+    }
   }
 </style>

@@ -37,11 +37,12 @@ const { id, title, lanzamiento, descripcion, genero, img, rol, produccion } =
 
 <style>
   .card {
+    width: 100%;
     background: #fff;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
     margin-bottom: 1rem;
     border-radius: 8px;
-    padding: 0.7rem;
+    padding: 1rem;
   }
 
   .card-wrapper {
@@ -56,10 +57,15 @@ const { id, title, lanzamiento, descripcion, genero, img, rol, produccion } =
     border-radius: 7px;
   }
 
+  .card-wrapper div{
+    width: 100%;
+  }
+
   .flex-title {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 
   .flex-title h3 {
@@ -83,10 +89,23 @@ const { id, title, lanzamiento, descripcion, genero, img, rol, produccion } =
   }
 
   .genero {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     border-radius: 4px;
     background: #809bbf;
     padding: 2px 3px;
+  }
+  @media screen and (max-width: 475px) {
+    .card{
+      box-sizing: border-box;
+    }
+    .card-wrapper div{
+      display: none;
+    }
+    .card-wrapper > img{
+      max-width: none;
+      width: 100%;
+      height: 100%;
+    }
   }
 </style>
