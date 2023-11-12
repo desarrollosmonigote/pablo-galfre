@@ -3,6 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import elFetiche from "../assets/img/articulos/articulos-el-fetiche.jpeg";
 import rebelion from "../assets/img/articulos/articulos-rebelion.jpeg";
 import masacre from "../assets/img/articulos/articulos-masacre.jpg";
+import armas from "../assets/img/articulos/Armas_sin_control.jpg";
+import armasPDF from "../assets/pdf/articulos/Armas_sin_control.pdf"
+import aurasPDF from "../assets/pdf/articulos/Las_auras.pdf"
+import sobreviviPDF from "../assets/pdf/articulos/Yo_sobrevivi.pdf"
+import rebelionPDF from "../assets/pdf/articulos/Rebelion-en-la-granja.pdf"
+import fetichePDF from "../assets/pdf/articulos/El-Fetiche_diferente.pdf"
+
 ---
 
 <Layout title="articulos">
@@ -67,7 +74,9 @@ import masacre from "../assets/img/articulos/articulos-masacre.jpg";
               las escaleras, saludó a su familia y se fue.
             </p>
           </div>
-          <a href="articulos.html" class="btn leer-mas">Leer más</a>
+            <a href={rebelionPDF}  
+            target="_blank"
+            class="btn leer-mas">Leer más</a>
         </div>
       </div>
       <div class="articulo flex">
@@ -94,13 +103,15 @@ import masacre from "../assets/img/articulos/articulos-masacre.jpg";
               comenzó esta historia que no sé cómo terminará. Ya verán.
             </p>
           </div>
-          <a href="articulos.html" class="btn leer-mas">Leer más</a>
+          <a href={fetichePDF} 
+          target="_blank"
+          class="btn leer-mas">Leer más</a>
         </div>
       </div>
       <div class="articulo flex">
         <img
           class="img img-articulos"
-          src={masacre.src}
+          src={armas.src}
           alt="imagen del artículo El fetiche diferente"
         />
         <div class="flex-column">
@@ -119,7 +130,9 @@ import masacre from "../assets/img/articulos/articulos-masacre.jpg";
               te las quedás?
             </p>
           </div>
-          <a href="articulos.html" class="btn leer-mas">Leer más</a>
+          <a href={armasPDF} 
+          target="_blank"
+          class="btn leer-mas">Leer más</a>
         </div>
       </div>
       <div class="articulo flex">
@@ -144,7 +157,10 @@ import masacre from "../assets/img/articulos/articulos-masacre.jpg";
               indistintamente de la cultura o tiempo que el enfermo habitara.
             </p>
           </div>
-          <a href="articulos.html" class="btn leer-mas">Leer más</a>
+          <a 
+          href={aurasPDF} 
+          target="_blank"
+          class="btn leer-mas">Leer más</a>
         </div>
       </div>
       <div class="articulo flex">
@@ -172,7 +188,10 @@ import masacre from "../assets/img/articulos/articulos-masacre.jpg";
               había encontrado a su súper héroe.
             </p>
           </div>
-          <a href="articulos.html" class="btn leer-mas">Leer más</a>
+          <a 
+          href={sobreviviPDF}
+          target="_blank"
+          class="btn leer-mas">Leer más</a>
         </div>
       </div>
     </section>

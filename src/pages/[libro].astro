@@ -33,7 +33,7 @@ if (!info) {
       />
       <div>
         <h3>{info.title}</h3>
-        <p class="fecha">{info.fecha}</p>
+        <strong class="fecha">{info.fecha}</strong>
 
         <p>
           {info.descripcion}
@@ -63,10 +63,7 @@ if (!info) {
     margin-bottom: 2rem;
     min-height: 600px;
   }
-  .title-libros {
-    text-align: center;
-    padding-block: 1rem;
-  }
+
   .wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -100,6 +97,8 @@ if (!info) {
   }
 
   .fecha {
-    margin-bottom: .8rem;
+    color: var(--cl-dark-blue);
+    display: inline-block;
+    margin-bottom: 0.8rem;
   }
 </style>

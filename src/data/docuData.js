@@ -6,7 +6,7 @@ import docuBuscandoAsilo from "../assets/img/documentales/documentales-buscando-
 import docuConfesionesDeUnSicario from "../assets/img/documentales/documentales-confesiones-de-un-sicario.jpeg";
 import docuQuienMato from "../assets/img/documentales/documentales-quien-mato-a-pablo-escobar.jpeg";
 import docuLaBusqueda from "../assets/img/documentales/documentales-la-busqueda.jpeg";
-import docuLaOpera from "../assets/img/documentales/documentales-la-opera.jpeg";
+import docuLaOpera from "../assets/img/documentales/documentales-la-opera.jpg";
 import docuThePope from "../assets/img/documentales/documentales-the-pope.jpeg";
 import docuPeronismo from "../assets/img/documentales/documentales-peronismo.jpeg";
 import docuLaRedNazi from "../assets/img/documentales/documentales-la-red-nazi.jpeg";
