@@ -7,27 +7,38 @@ import galfreBio from "../../assets/img/galfre-rostro-2.png";
   <div class="flex">
     <div>
       <p>
-        Soy tan sólo un incansable periodista e investigador que siempre busca
-        de historias interesantes por contar y vivir.
+        Desde hace más de 20 años soy tan sólo un incansable periodista e
+        investigador. Siempre en busca de historias interesantes por contar, vivir y
+        que muevan los cimientos de la sociedad.
       </p>
       <p>
-        Si bien me dedico al periodismo y la producción de documentales, en
-        estos momentos me interesa remarcar que, a partir de los resultados que
-        tuvieron mis investigaciones periodísticas (inocentes liberados,
-        manicomios clausurados, homicidios culposos elevados a juicio), también
-        me desempeño como investigador judicial, sobre todo en casos de
-        inocentes condenados.
+        Así fue cómo, a través de los años, logré ser parte de dos gestas colectivas
+        que me llenan de orgullo:
       </p>
       <p>
-        En televisión, fuí productor periodístico de Cámara testigo (América,
-        2005), Blog, periodismo de autor (Canal 9, 2006) y cronista de Cámara en
-        mano (Telefé, 2006), entre otros ciclos.
+        El documental El Rati Horror Show, dirigido por Enrique Piñeyro, que
+        posibilitó la liberación de Fernando Carrera, un hombre condenado a 30 años
+        de prisión por un crimen que no había cometido.
       </p>
       <p>
-        Uno de los grandes placeres que me di como periodista de investigación
-        fue idear, investigar y producir el documental El Rati Horror Show,
-        dirigido por Enrique Piñeyro, film que posibilitó la libertad de un
-        inocente preso. El caso fue conocido como la Masacre de Pompeya.
+        La Comunidad, viaje al abismo de una granja de rehabilitación (Editorial
+        Sudestada) libro de investigación periodística que derivó en el cierre de dos
+        grajas donde se vulneraban los derechos humanos de los consumidores de
+        drogas.
+      </p>
+      <p>
+        Eso soy. Alguien que le gusta chusmear en mundos ajenos, distintos, usando
+        distintos formatos. Así fue como también publiqué la novela gráfica Gatillo
+        fácil (basada en la historia del Rati) y el podcast Muertes en el internado,
+        documental sonoro basado en el libro La Comunidad, el cual produje, guioné y
+        conduje.
+      </p>
+      <p>
+        A partir de estas investigaciones periodísticas también me transformé en un
+        investigador privado sui generis. Desde hace unos años realizó investigaciones
+        para Innocence Project Argentina, ONG que se dedica a defender a personas
+        que fueron condenadas por crímenes que no cometieron. Me dedico a
+        desarmar causas judiciales armadas por la policía y la justicia.
       </p>
     </div>
     <img
@@ -45,6 +56,14 @@ import galfreBio from "../../assets/img/galfre-rostro-2.png";
     padding-block: 1rem;
   }
 
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex > div {
+    width: 60%;
+  }
   div > p {
     padding-rigth: 2rem;
 	margin-bottom: .8rem;
@@ -53,6 +72,8 @@ import galfreBio from "../../assets/img/galfre-rostro-2.png";
   .img-bio {
     max-width: 300px;
 	object-fit: cover;
+  margin-right: 5rem;
+  margin-bottom: 3rem;
   }
 
   @media (max-width: 950px) {
@@ -65,5 +86,8 @@ import galfreBio from "../../assets/img/galfre-rostro-2.png";
     .flex {
       flex-direction: column;
     }
+    .flex > div {
+    width: 100%;
+  }
   }
 </style>
