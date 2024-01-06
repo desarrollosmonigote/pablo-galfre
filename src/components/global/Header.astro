@@ -5,7 +5,7 @@ import logo from "../../assets/img/logo-galfre.png";
 <header class="primary-header">
   <div class="nav-wrapper flex">
     <div class="logo">
-      <a href="index.html"><img src={logo.src} alt="" /></a>
+      <a href="/index.html"><img src={logo.src} alt="Logo" /></a>
     </div>
 
     <button class="mobile-nav-toggle" aria-controls="primary-navigation">
@@ -18,12 +18,14 @@ import logo from "../../assets/img/logo-galfre.png";
         class="primary-navigation flex"
       >
         <li class="active">
-          <a class="nav-item" href="index.html">Inicio</a>
+          <a class="nav-item" href="/index.html">Inicio</a>
         </li>
-        <li><a class="nav-item" href="los-ladrones.html">Documentales</a></li>
-        <li><a class="nav-item" href="podcast.html">Podcast</a></li>
-        <li><a class="nav-item" href="la-comunidad.html">Libros</a></li>
-        <li><a class="nav-item" href="articulos.html">Artículos</a></li>
+        <li><a class="nav-item" href="/los-ladrones/">Documentales</a></li>
+        <li><a class="nav-item" href="/podcast/">Podcast</a></li>
+        <li><a class="nav-item" href="/la-comunidad/">Libros</a></li>
+        <li>
+          <a class="nav-item" href="/articulos/">Artículos</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -141,12 +143,15 @@ import logo from "../../assets/img/logo-galfre.png";
   }
 </style>
 
-<script>
-  const nav = document.querySelector(".primary-navigation");
-  const navToggle = document.querySelector(".mobile-nav-toggle");
+<script is:inline>
+  // const nav = document.querySelector(".primary-navigation");
+  // const navToggle = document.querySelector(".mobile-nav-toggle");
 
-  navToggle.addEventListener("click", () => {
+  document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
+    const nav = document.querySelector(".primary-navigation");
     const visiblity = nav.getAttribute("data-visible");
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+
     if (visiblity === "false") {
       nav.setAttribute("data-visible", "true");
       navToggle.setAttribute("aria-expanded", "true");

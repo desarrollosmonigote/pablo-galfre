@@ -101,4 +101,25 @@ if (!info) {
     display: inline-block;
     margin-bottom: 0.8rem;
   }
+
+  @media (max-width: 1300px) {
+    .main-libros-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      padding: 0;
+      justify-content: center;
+    }
+    .main-libros-wrapper {
+      padding: 0.5rem;
+    }
+    .main-libros-wrapper > div > p {
+      display: none;
+    }
+  }
 </style>
