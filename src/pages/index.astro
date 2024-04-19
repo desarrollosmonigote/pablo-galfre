@@ -1,16 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import home from "../assets/img/home.jpeg";
-import Biografia from "../components/main/Biografia.astro";
-import Trayectoria from "../components/main/Trayectoria.astro";
-import Libros from "../components/Libros.astro";
-import Documentales from "../components/Documentales.astro";
-import Articulos from "../components/Articulos.astro";
-import Podcasts from "../components/main/Podcasts.astro";
+import Layout from '../layouts/Layout.astro';
+import home from '../assets/img/home.jpeg';
+import Biografia from '../components/main/Biografia.astro';
+import Trayectoria from '../components/main/Trayectoria.astro';
+import Libros from '../components/Libros.astro';
+import Documentales from '../components/Documentales.astro';
+import Articulos from '../components/Articulos.astro';
+import Podcasts from '../components/main/Podcasts.astro';
 ---
 
-<Layout title="Pablo Galfré">
-  <section class="hero" style={`background-image: url(${home.src});`}>
+<Layout title='Pablo Galfré'>
+  <section
+    class='hero'
+    style={`background-image: url(${home.src});`}>
     <!-- <h2 id="title">Periodismo</h2>
     <h2>Podcast</h2>
       <h2>Documentales</h2> -->
@@ -21,7 +23,6 @@ import Podcasts from "../components/main/Podcasts.astro";
   <Articulos />
   <Biografia />
   <Trayectoria />
-  
 </Layout>
 
 <style>
@@ -36,7 +37,7 @@ import Podcasts from "../components/main/Podcasts.astro";
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .hero h2 {
     color: var(--cl-white);
     font-weight: 600;
@@ -44,11 +45,11 @@ import Podcasts from "../components/main/Podcasts.astro";
     align-self: center;
     margin-right: 1rem;
   }
-  
+
   .img-bio {
     max-width: 300px;
   }
-  </style>
+</style>
 
 <!-- <script>
   const titles = ["Periodismo", "Podcast", "Documentales"];
@@ -63,4 +64,3 @@ import Podcasts from "../components/main/Podcasts.astro";
 
   setInterval(changeTitle, 2000);
 </script> -->
-

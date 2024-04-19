@@ -10,8 +10,21 @@ import docuLaOpera from "../assets/img/documentales/documentales-la-opera.jpg";
 import docuThePope from "../assets/img/documentales/documentales-the-pope.jpeg";
 import docuPeronismo from "../assets/img/documentales/documentales-peronismo.jpeg";
 import docuLaRedNazi from "../assets/img/documentales/documentales-la-red-nazi.jpeg";
+import docuNahir from "../assets/img/documentales/documentales-nahir.png";
 
 export const DocuData = [
+  {
+    id: "nahir",
+    title: "Nahir, el secreto de un crimen",
+    genero: "Policial",
+    produccion: "Kapow",
+    dirección: "",
+    rol: "Producción periodística",
+    lanzamiento: "2024",
+    img: `${docuNahir.src}`,
+    descripcion:
+      "Producción periodística de Nahir, el secreto del crimen, documental que narra la historia y los secretos detrás la historia del asesinato de Fernando Pastorizzo.",
+  },
   {
     id: "los-ladrones",
     title: "Los ladrones: la verdadera historia del robo del siglo",
@@ -19,7 +32,7 @@ export const DocuData = [
     produccion: "Netflix",
     dirección: "",
     rol: "Producción periodística",
-    lanzamiento: "2006",
+    lanzamiento: "2022",
     img: `${docuLosLadrones.src}`,
     descripcion:
       "Producción periodística de Los Ladrones, documental que narra la historia del robo al Banco Río de Acassuso, en 2006. Producido por Anima Films y emitido por Netflix. ",

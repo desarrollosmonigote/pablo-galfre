@@ -1,32 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
+import Layout from '../layouts/Layout.astro';
+import muertePodcast from '../assets/img/podcast/podcast-muerte.jpeg';
 ---
 
-<Layout title="Podcast">
-  <section class="section podcast">
-    <h2 class="title">Podcast</h2>
-    <section class="flex">
+<Layout title='Podcast'>
+  <section class='section podcast'>
+    <h2 class='title'>Podcast</h2>
+    <section class='flex'>
       <div>
         <img
           src={muertePodcast.src}
-          alt=""
-          style="view-transition-name: podcast"
+          alt=''
+          style='view-transition-name: podcast'
         />
       </div>
       <div>
         <h3>Muertes en el internado <span>(2021)</span></h3>
-        <div class="flex-info">
+        <div class='flex-info'>
           <div>
             <p><span>Emitido por:</span> Podimo</p>
             <p><span>Narrado por:</span> Dolores Fonzi</p>
           </div>
           <div>
-            <p><span>Producida por:</span> <a href="https://lamaldita.tv/" target="_blank"> La maldita TV</a></p>
+            <p>
+              <span>Producida por:</span>
+              <a
+                href='https://lamaldita.tv/'
+                target='_blank'>
+                La maldita TV</a
+              >
+            </p>
             <p><span>Duración por episodio:</span> 33 minutos aprox.</p>
           </div>
         </div>
-        <p class="text">
+        <p class='text'>
           El 22 de febrero cuatro jóvenes murieron ahogados por monóxido de
           carbono en un incendio en ese centro de “salud mental” del norte del
           Gran Buenos Aires. El hecho no tuvo casi cobertura mediática, pese a
@@ -38,7 +45,7 @@ import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
           Revisión de la Ley de Salud Mental provincial?
         </p>
 
-        <p class="text">
+        <p class='text'>
           Idea original, investigación periodística y co-guionista de Muertes en
           el internado, el primer podcast documental true crimen de Argentina,
           basado en mi libro “La Comunidad”. También tuve el placer profesional
@@ -52,9 +59,8 @@ import muertePodcast from "../assets/img/podcast/podcast-muerte.jpeg";
 </Layout>
 
 <style>
-
-  section.podcast{
-    margin-bottom: 8rem;
+  section.podcast {
+    min-height: 100vh;
   }
   .title {
     text-align: center;
