@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 // import home from '../assets/img/home.jpeg';
 import home from '../assets/img/herohomev2.jpg';
+import homelaptop from '../assets/img/herohomev2laptop.jpg';
 import homemobile from '../assets/img/herohomev2mobile.jpg';
 import Biografia from '../components/main/Biografia.astro';
 import Trayectoria from '../components/main/Trayectoria.astro';
@@ -15,6 +16,10 @@ import Podcasts from '../components/main/Podcasts.astro';
   <section
     class='hero'
     style={`background-image: url(${home.src});`}>
+  </section>
+  <section
+    class='heroLaptop'
+    style={`background-image: url(${homelaptop.src});`}>
   </section>
   <section
     class='heroMobile'
@@ -42,6 +47,14 @@ import Podcasts from '../components/main/Podcasts.astro';
 
   }
 
+  .heroLaptop{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: none;
+    width: 100%;
+  }
   .heroMobile{
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,11 +64,19 @@ import Podcasts from '../components/main/Podcasts.astro';
     width: 100%;
   }
 
+  @media (min-width: 768px){
+    .heroLaptop{
+      display: flex;
+    }
+    .heroMobile{
+      display: none;
+    }
+  }
   @media (min-width: 1440px){
     .hero{
       display: flex;
     }
-    .heroMobile{
+    .heroLaptop{
       display: none;
     }
   }
