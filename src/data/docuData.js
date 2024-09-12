@@ -10,7 +10,7 @@ import docuLaOpera from "../assets/img/documentales/documentales-la-opera.jpg";
 import docuThePope from "../assets/img/documentales/documentales-the-pope.jpeg";
 import docuPeronismo from "../assets/img/documentales/documentales-peronismo.jpeg";
 import docuLaRedNazi from "../assets/img/documentales/documentales-la-red-nazi.jpeg";
-import docuNahir from "../assets/img/documentales/documentales-nahir.png";
+import docuNahir from "../assets/img/documentales/documentales_nahir.webp";
 
 export const DocuData = [
   {

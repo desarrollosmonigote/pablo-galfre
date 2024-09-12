@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import home from '../assets/img/home.jpeg';
+// import home from '../assets/img/home.jpeg';
+import home from '../assets/img/herohomev2.jpg';
+import homemobile from '../assets/img/herohomev2mobile.jpg';
 import Biografia from '../components/main/Biografia.astro';
 import Trayectoria from '../components/main/Trayectoria.astro';
 import Libros from '../components/Libros.astro';
@@ -13,9 +15,10 @@ import Podcasts from '../components/main/Podcasts.astro';
   <section
     class='hero'
     style={`background-image: url(${home.src});`}>
-    <!-- <h2 id="title">Periodismo</h2>
-    <h2>Podcast</h2>
-      <h2>Documentales</h2> -->
+  </section>
+  <section
+    class='heroMobile'
+    style={`background-image: url(${homemobile.src});`}>
   </section>
   <Documentales />
   <Podcasts />
@@ -34,8 +37,27 @@ import Podcasts from '../components/main/Podcasts.astro';
     -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
-    display: flex;
+    display: none;
     justify-content: flex-end;
+
+  }
+
+  .heroMobile{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+  }
+
+  @media (min-width: 1440px){
+    .hero{
+      display: flex;
+    }
+    .heroMobile{
+      display: none;
+    }
   }
 
   .hero h2 {
