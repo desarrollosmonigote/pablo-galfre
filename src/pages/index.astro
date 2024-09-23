@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 // import home from '../assets/img/home.jpeg';
-import home from '../assets/img/herohomev2.jpg';
+import home from '../assets/img/v2galfre.png';
 import homelaptop from '../assets/img/herohomev2laptop.jpg';
-import homemobile from '../assets/img/herohomev2mobile.jpg';
+import homemobile from '../assets/img/mobilegalfre.png';
 import Biografia from '../components/main/Biografia.astro';
 import Trayectoria from '../components/main/Trayectoria.astro';
 import Libros from '../components/Libros.astro';
@@ -17,14 +17,11 @@ import Podcasts from '../components/main/Podcasts.astro';
     class='hero'
     style={`background-image: url(${home.src});`}>
   </section>
-  <section
-    class='heroLaptop'
-    style={`background-image: url(${homelaptop.src});`}>
-  </section>
+
   <section
     class='heroMobile'
     style={`background-image: url(${homemobile.src});`}>
-  </section>
+  </section> 
   <Documentales />
   <Podcasts />
   <Libros />
@@ -47,39 +44,24 @@ import Podcasts from '../components/main/Podcasts.astro';
 
   }
 
-  .heroLaptop{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-    display: none;
-    width: 100%;
-  }
+
   .heroMobile{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center ; 
     min-height: 100vh;
     display: flex;
     width: 100%;
-  }
+  } 
 
   @media (min-width: 768px){
-    .heroLaptop{
-      display: flex;
-    }
-    .heroMobile{
-      display: none;
-    }
+  .hero{
+    display: flex;
   }
-  @media (min-width: 1440px){
-    .hero{
-      display: flex;
-    }
-    .heroLaptop{
-      display: none;
-    }
+  .heroMobile{
+    display: none;
   }
+}
 
   .hero h2 {
     color: var(--cl-white);
